@@ -1,0 +1,15 @@
+#forgot {
+  text-decoration: none;
+  color: white;
+}
+
+#signup-page {
+  display: block;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+}
+
+#signup-page:hover {
+  text-decoration: underline;
+}

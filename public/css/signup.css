@@ -1,0 +1,10 @@
+a {
+    display: block;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+a:hover {
+    text-decoration: underline;
+  }

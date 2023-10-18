@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expense</title>
+    <style>
+        .button-common{
+            background-color: rgb(241, 236, 236);
+            color: black;
+            margin: 10px 0px;
+            display: block;
+            width: fit-content;
+        }
+        #expense{
+            display: flow;
+        }
+        input:not[type="button"]{
+            padding: 5px;
+            height: 10px;
+            width: 200px;
+            margin: 7px 2px;
+            border-color: darkgray
+        }
+       #selectItem{
+            height: 25px;
+            width: 100px;
+            margin: 7px 2px;
+            border-color: darkgray
+        }
+        input[type="button"]{
+            background-color: red;
+            margin: 10px 10px;
+            color: white;
+        }
+        #error {
+            color: red;
+        }
+        #no-of-item{
+            margin: 10px 10px;
+            border-color: black;
+            height: 25px;
+            width: 40px
+        }
+
+    </style>
+  </head>
+  <body>
+        <form id="expense">
+                <label for="description">Description</label>
+                <input type="text" id="description" required placeholder="Enter Description...">
+                <label for= "amount">Expense Amount: </label>
+                <input type="number" id="amount" required placeholder="Enter Amount..." >
+                <label for="selectItem"> Choose a category: </label>
+            <select id="selectItem">
+                <option selected>Select option</option>
+                <option value="Food">Food</option>
+                <option value="Fuel">Fuel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Movie">Movie</option>
+                <option value="Other">Other</option>
+              </select><br>
+              <button id="add-expense" class="button-common">Add Expense</button>
+        </form>
+         <button id="razor-pay" class="button-common">Buy Premium</button>
+         <div id="premium-member" style="display: none;" >You are a premium user <button id="leader-board" class="button-common">Show Leaderboards</button></div>
+         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+          <h2>Expense Data<select id="no-of-item">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+          </select></h2>
+          <ul id="list"></ul>
+          <div id="pagination"></div>
+          <button id="download-expense" class="button-common" style="display: none;">Download Expense Data</button>
+          <button id="download-old-expense" class="button-common" style="display: none;">Download Old Expense Data</button>
+         <ul id="all-file"></ul>
+          <h1 id="lead" style="display: none;">Leaderboard</h1>
+          <ol id="leader-list"></ol>
+          <div id="error"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="expense.js"></script>
+  </body>
+</html>
